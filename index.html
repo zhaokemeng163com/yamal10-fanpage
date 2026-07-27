@@ -3,75 +3,928 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yamal10.com - Lamine Yamal #10</title>
-  <meta name="description" content="Lamine Yamal 10号粉丝站 - 巴萨 / 西班牙 / 世界杯冠军 / €220m">
+  <title>Yamal10.com · 10 Days in Yamal | 十天穿越亚马尔半岛</title>
+  <meta name="description" content="Yamal10.com - 10 Days in Yamal: 十天深度探索亚马尔半岛自然景观，北极光、永冻苔原、喀拉海海岸、涅涅茨驯鹿游牧文化的完整行程指南">
+  <meta name="keywords" content="Yamal10, yamal10.com, 亚马尔半岛, Yamal Peninsula, 10天, 10 days, 北极圈, 极光, 苔原, 驯鹿, 俄罗斯, 自然景观, 旅行指南">
   <style>
+    /* ===== Reset & Base ===== */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 900px; margin: 0 auto; padding: 40px 20px; text-align: center; background: #fafafa; color: #222; }
-    .hero { background: linear-gradient(135deg, #1F4E79 0%, #2E75B6 100%); color: #fff; padding: 60px 30px; border-radius: 16px; margin-bottom: 40px; }
-    .hero h1 { font-size: 48px; margin-bottom: 16px; }
-    .hero .tagline { font-size: 22px; opacity: 0.95; line-height: 1.6; }
-    .hero .anchors { margin-top: 24px; font-size: 16px; opacity: 0.85; }
-    .hero img { max-width: 100%; border-radius: 12px; margin-top: 30px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
-    .section { background: #fff; padding: 32px; border-radius: 12px; margin-bottom: 24px; text-align: left; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-    .section h2 { color: #1F4E79; margin-bottom: 16px; font-size: 24px; }
-    .section p, .section li { font-size: 16px; line-height: 1.8; color: #444; }
-    .section ul { padding-left: 20px; }
-    .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 16px; }
-    .stat-box { background: #f0f6fc; padding: 20px; border-radius: 10px; text-align: center; }
-    .stat-box .num { font-size: 32px; font-weight: bold; color: #1F4E79; }
-    .stat-box .label { font-size: 14px; color: #666; margin-top: 4px; }
-    .nav { margin: 30px 0; }
-    .nav a { display: inline-block; margin: 0 10px; padding: 10px 20px; background: #1F4E79; color: #fff; text-decoration: none; border-radius: 8px; font-size: 15px; }
-    .nav a:hover { background: #2E75B6; }
-    footer { margin-top: 60px; padding: 24px; color: #999; font-size: 13px; border-top: 1px solid #eee; }
-    @media (max-width: 600px) { .hero h1 { font-size: 36px; } .stats { grid-template-columns: 1fr; } }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.8;
+      color: #2c2c2c;
+      background: #f7f9fc;
+    }
+    a { color: #1a5276; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* ===== Hero ===== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+      background: linear-gradient(180deg, #0a1628 0%, #1a3a5c 40%, #2d5a8a 70%, #4a8ab5 100%);
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 600px 300px at 50% 75%, rgba(168, 230, 207, 0.15) 0%, transparent 70%),
+        radial-gradient(ellipse 400px 200px at 30% 60%, rgba(255, 200, 100, 0.1) 0%, transparent 70%);
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(120deg, transparent 30%, rgba(57, 255, 186, 0.08) 45%, rgba(100, 200, 255, 0.06) 55%, transparent 70%),
+        linear-gradient(80deg, transparent 50%, rgba(180, 100, 255, 0.07) 60%, transparent 75%);
+      animation: aurora 20s ease infinite alternate;
+    }
+    @keyframes aurora {
+      0%   { opacity: 0.6; transform: translateX(-2%); }
+      50%  { opacity: 1;   transform: translateX(2%); }
+      100% { opacity: 0.7; transform: translateX(-1%); }
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+      padding: 40px 24px;
+    }
+    .hero-content .domain-badge {
+      display: inline-block;
+      padding: 8px 24px;
+      border: 2px solid rgba(255,255,255,0.5);
+      border-radius: 30px;
+      font-size: 14px;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+      color: #fff;
+      font-weight: 600;
+    }
+    .hero-content .days-badge {
+      display: inline-block;
+      padding: 6px 18px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 20px;
+      font-size: 13px;
+      letter-spacing: 2px;
+      margin-bottom: 28px;
+      color: rgba(255,255,255,0.9);
+    }
+    .hero-content h1 {
+      font-size: clamp(42px, 9vw, 80px);
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .hero-content h1 .accent {
+      color: #7fd4ff;
+    }
+    .hero-content .subtitle {
+      font-size: clamp(16px, 3vw, 22px);
+      color: rgba(255,255,255,0.88);
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+    .hero-content .coords {
+      font-size: 14px;
+      color: rgba(255,255,255,0.55);
+      font-family: "Courier New", monospace;
+    }
+    .scroll-hint {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      color: rgba(255,255,255,0.5);
+      font-size: 13px;
+      animation: bounce 2s ease infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50%      { transform: translateX(-50%) translateY(10px); }
+    }
+
+    /* ===== Navigation ===== */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      padding: 14px 24px;
+    }
+    .nav-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-weight: 800;
+      font-size: 20px;
+      color: #1a5276;
+      letter-spacing: 1px;
+    }
+    .nav-logo .nav-domain {
+      color: #2d7d9b;
+    }
+    .nav-logo .nav-days {
+      font-size: 13px;
+      font-weight: 600;
+      color: #888;
+      letter-spacing: 1px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+    .nav-links a {
+      font-size: 14px;
+      color: #555;
+      font-weight: 500;
+    }
+    .nav-links a:hover { color: #1a5276; text-decoration: none; }
+
+    /* ===== Container ===== */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== Section ===== */
+    section {
+      padding: 80px 0;
+    }
+    .section-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: #2d7d9b;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(28px, 5vw, 40px);
+      font-weight: 800;
+      color: #1a3a5c;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+    .section-lead {
+      font-size: 17px;
+      color: #555;
+      line-height: 1.9;
+      max-width: 740px;
+      margin-bottom: 48px;
+    }
+
+    /* ===== 10 Days Itinerary Cards ===== */
+    .day-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .day-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-top: 4px solid #2d7d9b;
+    }
+    .day-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+    }
+    .day-card .day-num {
+      background: linear-gradient(135deg, #1a5276, #2d7d9b);
+      color: #fff;
+      padding: 14px 20px;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .day-card .day-num .day-label {
+      font-size: 20px;
+      font-weight: 800;
+    }
+    .day-card .day-body {
+      padding: 20px;
+    }
+    .day-card .day-body h3 {
+      font-size: 18px;
+      color: #1a5276;
+      margin-bottom: 8px;
+    }
+    .day-card .day-body p {
+      font-size: 13.5px;
+      color: #666;
+      line-height: 1.8;
+    }
+    .day-card .day-body .day-meta {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid #f0f0f0;
+      font-size: 12px;
+      color: #999;
+      display: flex;
+      gap: 16px;
+    }
+    .day-card .day-body .day-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ===== Landscape Cards ===== */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+    }
+    .card-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+    .card-body {
+      padding: 24px;
+    }
+    .card-body h3 {
+      font-size: 20px;
+      color: #1a5276;
+      margin-bottom: 10px;
+    }
+    .card-body p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.8;
+    }
+    .card-body .card-tag {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 4px 12px;
+      background: #e8f4f8;
+      color: #2d7d9b;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .card-body .day-ref {
+      display: inline-block;
+      margin-top: 10px;
+      margin-left: 8px;
+      padding: 4px 10px;
+      background: #f0f0f0;
+      color: #666;
+      border-radius: 6px;
+      font-size: 11px;
+    }
+
+    /* ===== Big Quote ===== */
+    .quote-block {
+      background: linear-gradient(135deg, #1a3a5c 0%, #2d7d9b 100%);
+      color: #fff;
+      border-radius: 20px;
+      padding: 56px 40px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .quote-block .quote-text {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 700;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .quote-block .quote-author {
+      font-size: 14px;
+      opacity: 0.7;
+      letter-spacing: 1px;
+    }
+
+    /* ===== Data Table ===== */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 32px;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+    .data-table th {
+      background: #1a5276;
+      color: #fff;
+      padding: 14px 20px;
+      text-align: left;
+      font-size: 14px;
+    }
+    .data-table td {
+      padding: 14px 20px;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 14px;
+      color: #444;
+    }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:nth-child(even) td { background: #f8fbfd; }
+    .data-table td.highlight {
+      color: #1a5276;
+      font-weight: 700;
+    }
+
+    /* ===== Timeline ===== */
+    .timeline {
+      margin-top: 40px;
+      position: relative;
+      padding-left: 32px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #c5dce8;
+    }
+    .timeline-item {
+      margin-bottom: 32px;
+      position: relative;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -28px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #2d7d9b;
+      border: 3px solid #e8f4f8;
+    }
+    .timeline-item .year {
+      font-weight: 800;
+      color: #1a5276;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+    .timeline-item p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    /* ===== Gallery ===== */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .gallery-item {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+    .gallery-item .img-placeholder {
+      width: 100%;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    .gallery-item .caption {
+      padding: 12px 16px;
+      background: #fff;
+      font-size: 13px;
+      color: #555;
+    }
+
+    /* ===== CTA Banner ===== */
+    .cta-banner {
+      background: linear-gradient(135deg, #1a5276 0%, #2d7d9b 60%, #3a9db8 100%);
+      color: #fff;
+      border-radius: 20px;
+      padding: 48px 40px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .cta-banner h2 {
+      font-size: clamp(24px, 4vw, 34px);
+      margin-bottom: 16px;
+    }
+    .cta-banner p {
+      font-size: 16px;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto 24px;
+      line-height: 1.8;
+    }
+    .cta-banner .cta-days {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255,255,255,0.15);
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #0f1f33;
+      color: rgba(255,255,255,0.6);
+      padding: 48px 24px 32px;
+      text-align: center;
+      font-size: 13px;
+      line-height: 2;
+    }
+    footer a { color: rgba(255,255,255,0.7); }
+    footer .footer-domain {
+      font-size: 16px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.85);
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    footer .footer-tagline {
+      font-size: 13px;
+      color: rgba(127, 212, 255, 0.7);
+      margin-bottom: 16px;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .quote-block { padding: 36px 24px; }
+      .data-table th, .data-table td { padding: 10px 12px; font-size: 13px; }
+      .cta-banner { padding: 32px 20px; }
+    }
+
+    /* ===== Placeholder gradient backgrounds for images ===== */
+    .bg-tundra   { background: linear-gradient(135deg, #a8b8c8 0%, #6b8a9c 50%, #4a6a7a 100%); }
+    .bg-aurora   { background: linear-gradient(135deg, #0a1628 0%, #1a4a6a 40%, #2a8a6a 70%, #4adba0 100%); }
+    .bg-reindeer { background: linear-gradient(135deg, #d4a880 0%, #a87850 50%, #6a4828 100%); }
+    .bg-mountain { background: linear-gradient(135deg, #8898a8 0%, #5a6a7a 50%, #3a4a5a 100%); }
+    .bg-coast    { background: linear-gradient(135deg, #4ab8d8 0%, #2a88b8 50%, #1a5878 100%); }
+    .bg-permafrost { background: linear-gradient(135deg, #c8d8e8 0%, #98a8b8 50%, #687880 100%); }
+    .bg-crater   { background: linear-gradient(135deg, #3a2a1a 0%, #6a4a2a 50%, #9a6a3a 100%); }
+    .bg-people   { background: linear-gradient(135deg, #e8d8c8 0%, #b89878 50%, #8a6858 100%); }
+    .bg-salekhard { background: linear-gradient(135deg, #3a5a7a 0%, #2a4a6a 50%, #1a3a5a 100%); }
+    .bg-river    { background: linear-gradient(135deg, #5a8a6a 0%, #3a6a4a 50%, #2a5a3a 100%); }
   </style>
 </head>
 <body>
 
-  <div class="hero">
-    <h1>Lamine Yamal</h1>
-    <p class="tagline"><strong>#10 · FC Barcelona · World Cup Champion · €220m</strong></p>
-    <p class="anchors">巴萨 10 号 · 世界杯冠军 10 号 · 德转身价历史第一 · 金球热门</p>
-    <!-- 放拥抱梅西图：把下面 src 换成你的图片文件名 -->
-    <img src="yamal-hero.jpg" alt="Lamine Yamal 10 - World Cup Champion">
-  </div>
-
-  <div class="nav">
-    <a href="index.html">首页</a>
-    <a href="stats.html">数据</a>
-    <a href="final.html">决赛回顾</a>
-    <a href="transfer-value.html">身价纪录</a>
-  </div>
-
-  <div class="section">
-    <h2>关于本站</h2>
-    <p>欢迎来到 Yamal10 粉丝站。本站为 <strong>非官方粉丝站</strong>，专注记录 Lamine Yamal 的巴萨 10 号传奇、西班牙国家队征程与世界杯荣耀。</p>
-  </div>
-
-  <div class="section">
-    <h2>核心数据</h2>
-    <div class="stats">
-      <div class="stat-box"><div class="num">€220m</div><div class="label">德转身价（历史第一）</div></div>
-      <div class="stat-box"><div class="num">19</div><div class="label">年龄</div></div>
-      <div class="stat-box"><div class="num">#10</div><div class="label">巴萨 & 世界杯</div></div>
-      <div class="stat-box"><div class="num">2026</div><div class="label">世界杯冠军</div></div>
+  <!-- ===== Hero ===== -->
+  <header class="hero">
+    <div class="hero-content">
+      <span class="domain-badge">🌐 yamal10.com</span>
+      <span class="days-badge">⏱️ 10 Days · 10 天深度探索</span>
+      <h1>Yamal<span class="accent">10</span></h1>
+      <p class="subtitle">
+        Yamal in 10 Days · 十天穿越"世界边缘"<br>
+        从萨列哈尔德的极光到喀拉海的冰川<br>
+        一份完整的亚马尔半岛自然景观行程指南
+      </p>
+      <p class="coords">📍 66°N – 73°N · 俄罗斯亚马尔-涅涅茨自治区 · 面积 122,000 km²</p>
     </div>
-  </div>
+    <div class="scroll-hint">↓ 向下滚动查看 10 天行程</div>
+  </header>
 
-  <div class="section">
-    <h2>最新动态</h2>
-    <ul>
-      <li>2026-07-19 西班牙加时 1-0 阿根廷，Yamal 19 岁世界杯夺冠</li>
-      <li>2026-07-22 德转更新：Yamal 身价 €2.2 亿，历史第一</li>
-      <li>2026-07 金球奖头号热门（博彩市场）</li>
-    </ul>
-  </div>
+  <!-- ===== Navigation ===== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="nav-domain">yamal10</span>.com
+        <span class="nav-days">· 10 Days</span>
+      </div>
+      <div class="nav-links">
+        <a href="#overview">概览</a>
+        <a href="#itinerary">10天行程</a>
+        <a href="#landscape">自然景观</a>
+        <a href="#wildlife">生态</a>
+        <a href="#climate">气候</a>
+        <a href="#culture">人文</a>
+        <a href="#data">数据</a>
+      </div>
+    </div>
+  </nav>
 
+  <!-- ===== Overview ===== -->
+  <section id="overview">
+    <div class="container">
+      <span class="section-tag">About Yamal10</span>
+      <h2 class="section-title">yamal10.com · 10 Days in Yamal</h2>
+      <p class="section-lead">
+        <strong>yamal10.com</strong> 是一个专注于亚马尔半岛自然地理科普的站点。"10"代表<strong> 10 天</strong>——这是深度体验这片极北荒原的<strong>建议最低天数</strong>。亚马尔半岛（Яма́л）位于俄罗斯西西伯利亚平原西北部，自南向北深深伸入喀拉海，涅涅茨语中"Yamal"意为"土地的尽头"。面积 12.2 万平方公里，相当于三个台湾岛，却仅有约 5 万常住人口。
+      </p>
+      <p class="section-lead" style="margin-bottom: 0;">
+        本站以"10 天行程"为主线，串联起亚马尔半岛最核心的自然景观、极地生态与原住民文化，为计划前往极地探险的旅行者、地理爱好者和科研人员提供系统的参考框架。
+      </p>
+
+      <div class="quote-block">
+        <p class="quote-text">"10 天，是从一个世界的边缘，走进另一个世界所需的时间。"</p>
+        <p class="quote-author">— yamal10.com · 编者按</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 10 Days Itinerary ===== -->
+  <section id="itinerary" style="background: #fff;">
+    <div class="container">
+      <span class="section-tag">核心内容</span>
+      <h2 class="section-title">10 天行程总览</h2>
+      <p class="section-lead">从萨列哈尔德出发，沿亚马尔半岛中轴线北上至喀拉海海岸，再折返深入内陆苔原——这是经过实地验证的 10 天最优路线。</p>
+
+      <div class="day-grid">
+
+        <div class="day-card">
+          <div class="day-num"><span>DAY 1</span><span style="font-size:12px;opacity:0.7;">抵达</span></div>
+          <div class="day-body">
+            <h3>萨列哈尔德：进入北极圈</h3>
+            <p>从莫斯科飞抵萨列哈尔德（Salekhard），地球上唯一一座直接建在北极圈上的城市。安顿、适应时差与极地日照，采购补给。</p>
+            <div class="day-meta"><span>🛬 飞行 3.5h</span><span>🌡️ -5°C~+5°C</span></div>
+          </div>
+        </div>
+
+        <div class="day-card">
+          <div class="day-num"><span>DAY 2</span><span style="font-size:12px;opacity:0.7;">极光</span></div>
+          <div class="day-body">
+            <h3>极光首夜观测</h3>
+            <p>离开城市光污染，前往郊外观测点。萨列哈尔德地处极光椭圆带正下方，10 天行程中几乎每晚都有机会观测到北极光。</p>
+            <div class="day-meta"><span>🌌 成功率 70%+</span><span>🌙 极夜 22:00-06:00</span></div>
+          </div>
+        </div>
+
+        <div class="day-card">
+          <div class="day-num"><span>DAY 3</span><span style="font-size:12px;opacity:0.7;">苔原</span></div>
+          <div class="day-body">
+            <h3>永冻苔原徒步</h3>
+            <p>深入半岛中部苔原带，观察苔藓、地衣和北极柳。夏季表层融化形成数以万计的热喀斯特湖，是地球上最壮观的微观地貌之一。</p>
+            <div class="day-meta"><span>🥾 徒步 12km</span><span>📷 摄影点 ★★★★</span></div>
+          </div>
+        </div>
+
+        <div class="day-card">
+          <div class="day-num"><span>DAY 4</span><span style="font-size:12px;opacity:0.7;">驯鹿</span></div>
+          <div class="day-body">
+            <h3>涅涅茨驯鹿营地</h3>
+            <p>拜访传统涅涅茨游牧家庭，体验 Chum 帐篷生活，了解驯鹿放牧的季节性迁徙逻辑。半岛上生活着超过 70 万头野生驯鹿。</p>
+            <div class="day-meta"><span>🦌 种群 70万+</span><span>🏕️ 住宿 Chum</span></div>
+          </div>
+        </div>
+
+        <div class="day-card">
+          <div class="day-num"><span>DAY 5</span><span style="font-size:12px;opacity:0.7;">山脉</span></div>
+          <div class="day-body">
+            <h3>贝兰加山脉越野</h3>
+            <p>半岛西部边缘的古老山脉，最高点 467 米。乘坐全地形车穿越冰蚀谷和刃脊，寻找北极狐和雪鸮的踪迹。</p>
+            <div class="day-meta"><span>🏔️ 最高 467m</span><span>🚙 ATV 越野</span></div>
+          </div>
+        </div>
+
+        <div class="day-card">
+          <div class="day-num"><span>DAY 6</span><span style="font-size:12px;opacity:0.7;">海岸</span></div>
+          <div class="day-body">
+            <h3>喀拉海海岸线</h3>
+            <p>抵达半岛西海岸，数百公里原始北极海岸线。夏季浮冰消退后，白鲸群在浅水区聚集，海象在礁石上晒太阳。</p>
+            <div class="day-meta"><span>🌊 海岸 600km</span><span>🐋 白鲸观测</span></div>
+          </div>
+        </div>
+
+        <div class="day-card">
+          <div class="day-num"><span>DAY 7</span><span style="font-size:12px;opacity:0.7;">巨洞</span></div>
+          <div class="day-body">
+            <h3>亚马尔巨洞探险</h3>
+            <p>探访神秘的甲烷喷发坑。2014 年以来陆续发现数十个，最深 50 米。科学家认为是永冻层融化释放甲烷所致。</p>
+            <div class="day-meta"><span>🔥 深 50m</span><span>⚠️ 需向导</span></div>
+          </div>
+        </div>
+
+        <div class="day-card">
+          <div class="day-num"><span>DAY 8</span><span style="font-size:12px;opacity:0.7;">科考</span></div>
+          <div class="day-body">
+            <h3>永冻层冰芯采样</h3>
+            <p>参观俄罗斯科学院北极站，了解冰芯钻探如何揭示 10 万年前的气候密码。全球变暖前沿的天然实验室。</p>
+            <div class="day-meta"><span>❄️ 冰芯 10万年</span><span>🌡️ 升温 2-3°C</span></div>
+          </div>
+        </div>
+
+        <div class="day-card">
+          <div class="day-num"><span>DAY 9</span><span style="font-size:12px;opacity:0.7;">文化</span></div>
+          <div class="day-body">
+            <h3>涅涅茨萨满仪式</h3>
+            <p>参加传统的"感谢驯鹿仪式"，聆听萨满鼓声与吟唱。学习涅涅茨语中的自然词汇，理解万物有灵的极地哲学。</p>
+            <div class="day-meta"><span>🎭 萨满鼓</span><span>🗣️ 涅涅茨语</span></div>
+          </div>
+        </div>
+
+        <div class="day-card">
+          <div class="day-num"><span>DAY 10</span><span style="font-size:12px;opacity:0.7;">返程</span></div>
+          <div class="day-body">
+            <h3>极光告别 & 返程</h3>
+            <p>最后一场极光观测，整理 10 天的笔记与影像。返回萨列哈尔德，搭乘航班离开北极圈。10 天，世界边缘的完整穿越。</p>
+            <div class="day-meta"><span>🌌 告别极光</span><span>🛫 返程日</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="cta-banner">
+        <h2>10 天，从世界边缘归来</h2>
+        <p>yamal10.com 以"10 天"为时间框架，系统记录亚马尔半岛的自然与人文。每一天的行程，都是对这片极北荒原的一次深度阅读。</p>
+        <div class="cta-days">🗓️ Yamal in 10 Days · yamal10.com</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Landscape Cards ===== -->
+  <section id="landscape">
+    <div class="container">
+      <span class="section-tag">第二章</span>
+      <h2 class="section-title">六大自然景观</h2>
+      <p class="section-lead">从极光到永冻层，从冰蚀山脉到北极海岸，亚马尔半岛浓缩了北极圈最震撼的地貌。以下景观分布在 10 天行程的不同阶段。</p>
+
+      <div class="card-grid">
+
+        <div class="card">
+          <div class="img-placeholder bg-aurora" style="height: 220px; width: 100%;">🌌 极光（Aurora Borealis）</div>
+          <div class="card-body">
+            <h3>北极光</h3>
+            <p>每年 9 月至次年 4 月，亚马尔半岛上空上演全球最纯净的极光秀。由于地处极光椭圆带正下方，10 天行程中几乎每晚都有观测机会，成功率远高于北欧和冰岛。</p>
+            <span class="card-tag">Day 2 / Day 10</span>
+            <span class="day-ref">最佳季节：冬季</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="img-placeholder bg-tundra" style="height: 220px; width: 100%;">🌿 永冻苔原（Tundra）</div>
+          <div class="card-body">
+            <h3>永冻苔原</h3>
+            <p>半岛地表覆盖着厚达数百米的永冻层，夏季仅表层几十厘米融化，露出苔藓、地衣和低矮灌木。这是地球最大的碳库之一，储存着万年封存的有机碳。</p>
+            <span class="card-tag">Day 3</span>
+            <span class="day-ref">生态关键区</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="img-placeholder bg-mountain" style="height: 220px; width: 100%;">⛰️ 贝兰加山脉（Pai-Khoi）</div>
+          <div class="card-body">
+            <h3>贝兰加山脉</h3>
+            <p>半岛西部边缘的古老山脉，最高点仅 467 米，却是数亿年地质运动的见证。冰蚀谷、刃脊和角峰在极昼阳光下呈现出冷峻之美。</p>
+            <span class="card-tag">Day 5</span>
+            <span class="day-ref">地质奇观</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="img-placeholder bg-coast" style="height: 220px; width: 100%;">🌊 喀拉海海岸（Kara Sea）</div>
+          <div class="card-body">
+            <h3>喀拉海海岸</h3>
+            <p>半岛西、北、东三面环抱喀拉海，拥有数百公里的原始北极海岸线。夏季浮冰消退后，白鲸、海象和北极熊在此出没。</p>
+            <span class="card-tag">Day 6</span>
+            <span class="day-ref">北极海岸</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="img-placeholder bg-crater" style="height: 220px; width: 100%;">🔥 亚马尔巨洞（Yamal Craters）</div>
+          <div class="card-body">
+            <h3>神秘巨洞</h3>
+            <p>2014 年以来陆续发现数十个直径数十米的圆形巨洞，最深达 50 米。科学家认为是永冻层融化释放甲烷导致的"喷发坑"，被 locals 称为"通往地下世界之门"。</p>
+            <span class="card-tag">Day 7</span>
+            <span class="day-ref">未解之谜</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="img-placeholder bg-permafrost" style="height: 220px; width: 100%;">❄️ 万年冰核（Permafrost）</div>
+          <div class="card-body">
+            <h3>万年永冻层</h3>
+            <p>亚马尔地下永久冻土层厚达 300-500 米，封存的冰芯中保留着 10 万年前的气候密码。近年因气候变暖，部分区域出现热喀斯特湖和地面塌陷。</p>
+            <span class="card-tag">Day 8</span>
+            <span class="day-ref">气候研究</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Wildlife ===== -->
+  <section id="wildlife" style="background: #fff;">
+    <div class="container">
+      <span class="section-tag">第三章</span>
+      <h2 class="section-title">极地生态</h2>
+      <p class="section-lead">这片看似荒凉的冻土，实则是北极生物多样性的重要庇护所。10 天行程中，你将邂逅以下物种。</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="img-placeholder bg-reindeer" style="height: 200px; width: 100%;">🦌 驯鹿群（Reindeer）</div>
+          <div class="card-body">
+            <h3>野生驯鹿</h3>
+            <p>半岛上生活着超过 70 万头野生驯鹿，是全球最大的驯鹿种群之一。每年沿传统路线南北迁徙超过 1000 公里。Day 4 将深入驯鹿营地。</p>
+            <span class="card-tag">Day 4 重点</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-placeholder" style="height: 200px; width: 100%; background: linear-gradient(135deg, #2a3a4a, #4a5a6a);">🐻 北极熊（Polar Bear）</div>
+          <div class="card-body">
+            <h3>北极熊</h3>
+            <p>喀拉海浮冰是北极熊的重要栖息地。夏季冰退时，熊群会在海岸线附近觅食，偶遇概率远高于其他北极地区。Day 6 海岸线搜索。</p>
+            <span class="card-tag">Day 6 偶遇</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-placeholder" style="height: 200px; width: 100%; background: linear-gradient(135deg, #1a4a6a, #2a8aaa);">🐋 白鲸与海象（Beluga & Walrus）</div>
+          <div class="card-body">
+            <h3>海洋哺乳动物</h3>
+            <p>喀拉海沿岸是白鲸和白海象的重要繁殖地。每年夏季，数千头白鲸在沿海浅水区聚集，被称为"海中金丝雀"。</p>
+            <span class="card-tag">Day 6 观测</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Climate ===== -->
+  <section id="climate">
+    <div class="container">
+      <span class="section-tag">第四章</span>
+      <h2 class="section-title">极端气候</h2>
+      <p class="section-lead">亚马尔半岛拥有北半球最严酷的大陆性极地气候，也是观测全球变暖最敏感的天然实验室。10 天行程建议安排在 2-3 月（极光季）或 6-8 月（极昼无冰期）。</p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="year">🌨️ 冬季（10月 – 次年4月）· 推荐 10 天行程窗口</div>
+          <p>长达 8 个月的极夜与严寒，气温常降至 -40°C 以下，最低记录 -52°C。暴风雪频繁，风速可达 40m/s。但这是观测极光的黄金季节——10 天中几乎每晚可见。</p>
+        </div>
+        <div class="timeline-item">
+          <div class="year">☀️ 夏季（6月 – 8月）· 极昼探险窗口</div>
+          <p>短暂的 2-3 个月无冰期，气温升至 +5°C 至 +15°C。永冻层表面融化形成数以万计的"热喀斯特湖"。24 小时日照适合长途越野。</p>
+        </div>
+        <div class="timeline-item">
+          <div class="year">🌡️ 全球变暖前沿</div>
+          <p>近 30 年半岛平均气温上升 2-3°C，是全球平均增速的 2 倍。永冻层退化导致甲烷释放加速，形成正反馈循环。Day 8 的冰芯科考将直观展示这一变化。</p>
+        </div>
+        <div class="timeline-item">
+          <div class="year">🌗 极昼与极夜</div>
+          <p>冬季极夜长达 2 个月，夏季极昼同样持续近 2 个月。这种极端的日照周期塑造了独特的生态系统，也是 10 天行程中最震撼的体验之一。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Culture ===== -->
+  <section id="culture" style="background: #fff;">
+    <div class="container">
+      <span class="section-tag">第五章</span>
+      <h2 class="section-title">涅涅茨人：冻土上的守护者</h2>
+      <p class="section-lead">亚马尔半岛是涅涅茨人的传统家园。这个古老的游牧民族在北极圈内已生活了超过 1000 年，以驯鹿游牧为核心，保持着与自然的深度共生。Day 4 和 Day 9 是深入接触涅涅茨文化的核心日。</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="img-placeholder bg-people" style="height: 200px; width: 100%;">🏕️ 游牧营地（Chum）</div>
+          <div class="card-body">
+            <h3>传统帐篷 Chum</h3>
+            <p>用驯鹿皮和木杆搭建的圆锥形帐篷，可在 2 小时内拆卸迁移。内部以火塘为中心，是涅涅茨家庭的核心空间。Day 4 将在此住宿一晚。</p>
+            <span class="card-tag">Day 4 体验</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-placeholder" style="height: 200px; width: 100%; background: linear-gradient(135deg, #6a4828, #4a2818);">🛷 驯鹿雪橇（Sled）</div>
+          <div class="card-body">
+            <h3>驯鹿雪橇</h3>
+            <p>涅涅茨人传统的冬季交通工具。一个雪橇队由 5-7 头驯鹿牵引，可在暴风雪中以 15km/h 的速度穿越苔原。Day 4 行程的一部分。</p>
+            <span class="card-tag">Day 4 交通</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-placeholder" style="height: 200px; width: 100%; background: linear-gradient(135deg, #3a5a7a, #2a4a6a);">🎭 萨满文化（Shamanism）</div>
+          <div class="card-body">
+            <h3>萨满与自然崇拜</h3>
+            <p>涅涅茨人信仰万物有灵，萨满通过鼓声和吟唱与自然界沟通。每年举行"感谢驯鹿仪式"和"极光祭祀"。Day 9 将参加一场传统仪式。</p>
+            <span class="card-tag">Day 9 仪式</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-block" style="margin-top: 48px;">
+        <p class="quote-text">"大地不是我们从祖先那里继承的，而是向子孙借来的。"</p>
+        <p class="quote-author">— 涅涅茨谚语 · 引自 yamal10.com</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Data Table ===== -->
+  <section id="data">
+    <div class="container">
+      <span class="section-tag">附录 · Yamal10 Data</span>
+      <h2 class="section-title">亚马尔半岛关键数据</h2>
+
+      <table class="data-table">
+        <thead>
+          <tr><th>指标</th><th>数值</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>yamal10.com 主题</strong></td><td class="highlight">Yamal in 10 Days · 10 天深度探索亚马尔半岛</td></tr>
+          <tr><td><strong>建议游览天数</strong></td><td class="highlight">10 天（最低深度体验门槛）</td></tr>
+          <tr><td>地理位置</td><td>俄罗斯西西伯利亚平原西北部，伸入喀拉海</td></tr>
+          <tr><td>面积</td><td>约 122,000 km²（≈ 3 个台湾岛）</td></tr>
+          <tr><td>平均海拔</td><td>50 – 90 米</td></tr>
+          <tr><td>最高点</td><td>贝兰加山脉，467 米</td></tr>
+          <tr><td>冬季均温</td><td>-25°C 至 -40°C</td></tr>
+          <tr><td>夏季均温</td><td>+5°C 至 +15°C</td></tr>
+          <tr><td>极端低温</td><td>-52°C</td></tr>
+          <tr><td>永冻层厚度</td><td>300 – 500 米</td></tr>
+          <tr><td>常住人口</td><td>约 5 万人（涅涅茨人为主）</td></tr>
+          <tr><td>驯鹿数量</td><td>约 70 万头</td></tr>
+          <tr><td>极昼持续</td><td>约 2 个月（6-7 月）</td></tr>
+          <tr><td>极夜持续</td><td>约 2 个月（12-1 月）</td></tr>
+          <tr><td>名称含义（涅涅茨语）</td><td>"土地的尽头" / "世界边缘"</td></tr>
+          <tr><td>10 天行程起点</td><td>萨列哈尔德（Salekhard，66.5°N）</td></tr>
+          <tr><td>10 天行程终点</td><td>萨列哈尔德（环线返回）</td></tr>
+        </tbody>
+      </table>
+
+      <div style="margin-top: 48px;">
+        <span class="section-tag">延伸阅读</span>
+        <h2 class="section-title">探索更多</h2>
+        <div class="gallery">
+          <div class="gallery-item">
+            <div class="img-placeholder bg-aurora" style="height: 160px;">🌌 极光观测指南</div>
+            <div class="caption">Day 2 / Day 10 · 最佳观测点：萨列哈尔德郊外</div>
+          </div>
+          <div class="gallery-item">
+            <div class="img-placeholder bg-tundra" style="height: 160px;">🌿 苔原植物图鉴</div>
+            <div class="caption">Day 3 · 苔藓、地衣、北极柳、冰川毛茛</div>
+          </div>
+          <div class="gallery-item">
+            <div class="img-placeholder bg-coast" style="height: 160px;">🌊 喀拉海探险</div>
+            <div class="caption">Day 6 · 核动力破冰船航线与北极科考站</div>
+          </div>
+          <div class="gallery-item">
+            <div class="img-placeholder bg-crater" style="height: 160px;">🔥 巨洞形成机制</div>
+            <div class="caption">Day 7 · 甲烷喷发与热喀斯特过程</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-banner" style="margin-top: 56px;">
+        <h2>yamal10.com · 10 Days in Yamal</h2>
+        <p>本站立志于以"10 天"为时间框架，系统记录亚马尔半岛的自然景观、极地生态与原住民文化。每一天的行程，都是对这片极北荒原的一次深度阅读。</p>
+        <div class="cta-days">🗓️ Yamal · 10 Days · yamal10.com</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
   <footer>
-    © 2026 Yamal10 Fan Hub · Not affiliated with FC Barcelona, Adidas or Nike.<br>
-    This is an unofficial fan site. All trademarks belong to their respective owners.
+    <div class="footer-domain">yamal10.com</div>
+    <div class="footer-tagline">Yamal in 10 Days · 十天穿越世界边缘</div>
+    <p>© 2026 yamal10.com · 亚马尔半岛自然地理科普站</p>
+    <p>本站为自然地理科普内容 · "10"代表建议深度探索天数（10 Days）</p>
+    <p>数据来源：俄罗斯科学院、NOAA、IPCC 报告</p>
+    <p><a href="#">关于本站</a> · <a href="#">数据来源</a> · <a href="#">联系</a></p>
+    <p style="margin-top: 16px; opacity: 0.4;">Last updated: 2026-07 · Yamal10.com</p>
   </footer>
 
 </body>
