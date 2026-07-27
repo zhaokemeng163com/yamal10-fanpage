@@ -1,91 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yamal #10 — Fan Info Page (Unofficial)</title>
+  <title>Yamal10.com - Lamine Yamal #10</title>
+  <meta name="description" content="Lamine Yamal 10号粉丝站 - 巴萨 / 西班牙 / 世界杯冠军 / €220m">
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      max-width: 720px;
-      margin: 40px auto;
-      padding: 0 20px;
-      color: #1a1a1a;
-      line-height: 1.6;
-    }
-    h1 { font-size: 1.8rem; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-    .badge {
-      display: inline-block;
-      background: #f5f5f5;
-      border: 1px solid #ddd;
-      border-radius: 20px;
-      padding: 4px 12px;
-      font-size: 0.75rem;
-      color: #666;
-      margin-bottom: 20px;
-    }
-    .disclaimer {
-      background: #fff8e1;
-      border-left: 4px solid #ffc107;
-      padding: 14px 16px;
-      margin: 20px 0;
-      font-size: 0.85rem;
-      color: #5a4a00;
-    }
-    .news {
-      background: #fafafa;
-      border: 1px solid #eee;
-      border-radius: 8px;
-      padding: 14px 16px;
-      margin: 10px 0;
-    }
-    .news a { color: #0056d6; text-decoration: none; }
-    .news a:hover { text-decoration: underline; }
-    .footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #eee; font-size: 0.78rem; color: #999; }
-    .update { font-size: 0.78rem; color: #888; margin-top: 4px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 900px; margin: 0 auto; padding: 40px 20px; text-align: center; background: #fafafa; color: #222; }
+    .hero { background: linear-gradient(135deg, #1F4E79 0%, #2E75B6 100%); color: #fff; padding: 60px 30px; border-radius: 16px; margin-bottom: 40px; }
+    .hero h1 { font-size: 48px; margin-bottom: 16px; }
+    .hero .tagline { font-size: 22px; opacity: 0.95; line-height: 1.6; }
+    .hero .anchors { margin-top: 24px; font-size: 16px; opacity: 0.85; }
+    .hero img { max-width: 100%; border-radius: 12px; margin-top: 30px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+    .section { background: #fff; padding: 32px; border-radius: 12px; margin-bottom: 24px; text-align: left; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .section h2 { color: #1F4E79; margin-bottom: 16px; font-size: 24px; }
+    .section p, .section li { font-size: 16px; line-height: 1.8; color: #444; }
+    .section ul { padding-left: 20px; }
+    .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 16px; }
+    .stat-box { background: #f0f6fc; padding: 20px; border-radius: 10px; text-align: center; }
+    .stat-box .num { font-size: 32px; font-weight: bold; color: #1F4E79; }
+    .stat-box .label { font-size: 14px; color: #666; margin-top: 4px; }
+    .nav { margin: 30px 0; }
+    .nav a { display: inline-block; margin: 0 10px; padding: 10px 20px; background: #1F4E79; color: #fff; text-decoration: none; border-radius: 8px; font-size: 15px; }
+    .nav a:hover { background: #2E75B6; }
+    footer { margin-top: 60px; padding: 24px; color: #999; font-size: 13px; border-top: 1px solid #eee; }
+    @media (max-width: 600px) { .hero h1 { font-size: 36px; } .stats { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
 
-  <h1>Yamal #10 Fan Info Page</h1>
-  <div class="badge">Unofficial fan-curated info page · not affiliated with player/club/sponsor</div>
-
-  <div class="disclaimer">
-    <strong>Disclaimer / 免责声明：</strong><br>
-    This site (<strong>yamal10.com</strong>) is an independently curated fan information page.
-    It is <u>not affiliated with, endorsed by, or operated on behalf of</u> Lamine Yamal,
-    his representatives, FC Barcelona, or any commercial partner.
-    No goods are sold here, no ads are placed, and no profit is generated.
-    All news links point to publicly accessible third-party sources.
+  <div class="hero">
+    <h1>Lamine Yamal</h1>
+    <p class="tagline"><strong>#10 · FC Barcelona · World Cup Champion · €220m</strong></p>
+    <p class="anchors">巴萨 10 号 · 世界杯冠军 10 号 · 德转身价历史第一 · 金球热门</p>
+    <!-- 放拥抱梅西图：把下面 src 换成你的图片文件名 -->
+    <img src="yamal-hero.jpg" alt="Lamine Yamal 10 - World Cup Champion">
   </div>
 
-  <h2 style="font-size:1.1rem;margin-top:28px;">Latest Updates / News Links</h2>
-
-  <div class="news">
-    <strong>2026-06-11</strong> · World Cup opens today; Yamal recovery watch continues<br>
-    <a href="https://www.espn.com/soccer/story/_/id/" target="_blank" rel="noopener noreferrer">
-      ESPN — Yamal targeting June 15 cameo (external feed)
-    </a>
+  <div class="nav">
+    <a href="index.html">首页</a>
+    <a href="stats.html">数据</a>
+    <a href="final.html">决赛回顾</a>
+    <a href="transfer-value.html">身价纪录</a>
   </div>
 
-  <div class="news">
-    <strong>2026-06-??</strong> · This page will be updated after Spain vs Cape Verde (Group Stage)<br>
-    <a href="https://www.mundodeportivo.com/fc-barcelona/lamine-yamal" target="_blank" rel="noopener noreferrer">
-      Mundo Deportivo — Lamine Yamal section (external)
-    </a>
+  <div class="section">
+    <h2>关于本站</h2>
+    <p>欢迎来到 Yamal10 粉丝站。本站为 <strong>非官方粉丝站</strong>，专注记录 Lamine Yamal 的巴萨 10 号传奇、西班牙国家队征程与世界杯荣耀。</p>
   </div>
 
-  <div class="news">
-    <strong>FIFA 2026 Match Schedule (external)</strong><br>
-    <a href="https://www.fifa.com/fifaplus/en/tournaments/mens/worldcup/canadamexicousa2026/matches" target="_blank" rel="noopener noreferrer">
-      FIFA.com — 2026 World Cup Matches
-    </a>
+  <div class="section">
+    <h2>核心数据</h2>
+    <div class="stats">
+      <div class="stat-box"><div class="num">€220m</div><div class="label">德转身价（历史第一）</div></div>
+      <div class="stat-box"><div class="num">19</div><div class="label">年龄</div></div>
+      <div class="stat-box"><div class="num">#10</div><div class="label">巴萨 & 世界杯</div></div>
+      <div class="stat-box"><div class="num">2026</div><div class="label">世界杯冠军</div></div>
+    </div>
   </div>
 
-  <div class="footer">
-    <div class="update">Page last updated: 2026-06-11 · hosted via GitHub Pages · static HTML</div>
-    Contact (for rights holders only): <a href="mailto:zhaokemeng@163.com">zhaokemeng@163.com</a>
+  <div class="section">
+    <h2>最新动态</h2>
+    <ul>
+      <li>2026-07-19 西班牙加时 1-0 阿根廷，Yamal 19 岁世界杯夺冠</li>
+      <li>2026-07-22 德转更新：Yamal 身价 €2.2 亿，历史第一</li>
+      <li>2026-07 金球奖头号热门（博彩市场）</li>
+    </ul>
   </div>
+
+  <footer>
+    © 2026 Yamal10 Fan Hub · Not affiliated with FC Barcelona, Adidas or Nike.<br>
+    This is an unofficial fan site. All trademarks belong to their respective owners.
+  </footer>
 
 </body>
 </html>
