@@ -7,7 +7,6 @@
   <meta name="description" content="Yamal10.com - 10 Days in Yamal: 十天深度探索亚马尔半岛自然景观，北极光、永冻苔原、喀拉海海岸、涅涅茨驯鹿游牧文化的完整行程指南">
   <meta name="keywords" content="Yamal10, yamal10.com, 亚马尔半岛, Yamal Peninsula, 10天, 10 days, 北极圈, 极光, 苔原, 驯鹿, 俄罗斯, 自然景观, 旅行指南">
   <style>
-    /* ===== Reset & Base ===== */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
@@ -20,7 +19,6 @@
     a:hover { text-decoration: underline; }
     img { max-width: 100%; height: auto; display: block; }
 
-    /* ===== Hero ===== */
     .hero {
       position: relative;
       min-height: 100vh;
@@ -117,7 +115,6 @@
       50%      { transform: translateX(-50%) translateY(10px); }
     }
 
-    /* ===== Navigation ===== */
     .nav {
       position: sticky;
       top: 0;
@@ -140,37 +137,14 @@
       color: #1a5276;
       letter-spacing: 1px;
     }
-    .nav-logo .nav-domain {
-      color: #2d7d9b;
-    }
-    .nav-logo .nav-days {
-      font-size: 13px;
-      font-weight: 600;
-      color: #888;
-      letter-spacing: 1px;
-    }
-    .nav-links {
-      display: flex;
-      gap: 24px;
-    }
-    .nav-links a {
-      font-size: 14px;
-      color: #555;
-      font-weight: 500;
-    }
+    .nav-logo .nav-domain { color: #2d7d9b; }
+    .nav-logo .nav-days { font-size: 13px; font-weight: 600; color: #888; letter-spacing: 1px; }
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a { font-size: 14px; color: #555; font-weight: 500; }
     .nav-links a:hover { color: #1a5276; text-decoration: none; }
 
-    /* ===== Container ===== */
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* ===== Section ===== */
-    section {
-      padding: 80px 0;
-    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 80px 0; }
     .section-tag {
       display: inline-block;
       font-size: 12px;
@@ -195,7 +169,6 @@
       margin-bottom: 48px;
     }
 
-    /* ===== 10 Days Itinerary Cards ===== */
     .day-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -209,10 +182,7 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       border-top: 4px solid #2d7d9b;
     }
-    .day-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.1);
-    }
+    .day-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
     .day-card .day-num {
       background: linear-gradient(135deg, #1a5276, #2d7d9b);
       color: #fff;
@@ -224,23 +194,10 @@
       align-items: center;
       justify-content: space-between;
     }
-    .day-card .day-num .day-label {
-      font-size: 20px;
-      font-weight: 800;
-    }
-    .day-card .day-body {
-      padding: 20px;
-    }
-    .day-card .day-body h3 {
-      font-size: 18px;
-      color: #1a5276;
-      margin-bottom: 8px;
-    }
-    .day-card .day-body p {
-      font-size: 13.5px;
-      color: #666;
-      line-height: 1.8;
-    }
+    .day-card .day-num .day-label { font-size: 20px; font-weight: 800; }
+    .day-card .day-body { padding: 20px; }
+    .day-card .day-body h3 { font-size: 18px; color: #1a5276; margin-bottom: 8px; }
+    .day-card .day-body p { font-size: 13.5px; color: #666; line-height: 1.8; }
     .day-card .day-body .day-meta {
       margin-top: 12px;
       padding-top: 10px;
@@ -250,13 +207,8 @@
       display: flex;
       gap: 16px;
     }
-    .day-card .day-body .day-meta span {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-    }
+    .day-card .day-body .day-meta span { display: inline-flex; align-items: center; gap: 4px; }
 
-    /* ===== Landscape Cards ===== */
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -269,29 +221,11 @@
       box-shadow: 0 4px 20px rgba(0,0,0,0.06);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.1);
-    }
-    .card-img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-    }
-    .card-body {
-      padding: 24px;
-    }
-    .card-body h3 {
-      font-size: 20px;
-      color: #1a5276;
-      margin-bottom: 10px;
-    }
-    .card-body p {
-      font-size: 14px;
-      color: #666;
-      line-height: 1.8;
-    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
+    .card-img { width: 100%; height: 220px; object-fit: cover; display: block; }
+    .card-body { padding: 24px; }
+    .card-body h3 { font-size: 20px; color: #1a5276; margin-bottom: 10px; }
+    .card-body p { font-size: 14px; color: #666; line-height: 1.8; }
     .card-body .card-tag {
       display: inline-block;
       margin-top: 14px;
@@ -313,7 +247,6 @@
       font-size: 11px;
     }
 
-    /* ===== Big Quote ===== */
     .quote-block {
       background: linear-gradient(135deg, #1a3a5c 0%, #2d7d9b 100%);
       color: #fff;
@@ -322,19 +255,9 @@
       text-align: center;
       margin: 40px 0;
     }
-    .quote-block .quote-text {
-      font-size: clamp(22px, 4vw, 32px);
-      font-weight: 700;
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-    .quote-block .quote-author {
-      font-size: 14px;
-      opacity: 0.7;
-      letter-spacing: 1px;
-    }
+    .quote-block .quote-text { font-size: clamp(22px, 4vw, 32px); font-weight: 700; line-height: 1.6; margin-bottom: 20px; }
+    .quote-block .quote-author { font-size: 14px; opacity: 0.7; letter-spacing: 1px; }
 
-    /* ===== Data Table ===== */
     .data-table {
       width: 100%;
       border-collapse: collapse;
@@ -344,99 +267,36 @@
       overflow: hidden;
       box-shadow: 0 2px 12px rgba(0,0,0,0.05);
     }
-    .data-table th {
-      background: #1a5276;
-      color: #fff;
-      padding: 14px 20px;
-      text-align: left;
-      font-size: 14px;
-    }
-    .data-table td {
-      padding: 14px 20px;
-      border-bottom: 1px solid #f0f0f0;
-      font-size: 14px;
-      color: #444;
-    }
+    .data-table th { background: #1a5276; color: #fff; padding: 14px 20px; text-align: left; font-size: 14px; }
+    .data-table td { padding: 14px 20px; border-bottom: 1px solid #f0f0f0; font-size: 14px; color: #444; }
     .data-table tr:last-child td { border-bottom: none; }
     .data-table tr:nth-child(even) td { background: #f8fbfd; }
-    .data-table td.highlight {
-      color: #1a5276;
-      font-weight: 700;
-    }
+    .data-table td.highlight { color: #1a5276; font-weight: 700; }
 
-    /* ===== Timeline ===== */
-    .timeline {
-      margin-top: 40px;
-      position: relative;
-      padding-left: 32px;
-    }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 8px;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: #c5dce8;
-    }
-    .timeline-item {
-      margin-bottom: 32px;
-      position: relative;
-    }
+    .timeline { margin-top: 40px; position: relative; padding-left: 32px; }
+    .timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: #c5dce8; }
+    .timeline-item { margin-bottom: 32px; position: relative; }
     .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: -28px;
-      top: 6px;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: #2d7d9b;
-      border: 3px solid #e8f4f8;
+      content: ''; position: absolute; left: -28px; top: 6px;
+      width: 12px; height: 12px; border-radius: 50%; background: #2d7d9b; border: 3px solid #e8f4f8;
     }
-    .timeline-item .year {
-      font-weight: 800;
-      color: #1a5276;
-      font-size: 18px;
-      margin-bottom: 4px;
-    }
-    .timeline-item p {
-      font-size: 14px;
-      color: #555;
-      line-height: 1.8;
-    }
+    .timeline-item .year { font-weight: 800; color: #1a5276; font-size: 18px; margin-bottom: 4px; }
+    .timeline-item p { font-size: 14px; color: #555; line-height: 1.8; }
 
-    /* ===== Gallery ===== */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 16px;
       margin-top: 32px;
     }
-    .gallery-item {
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    }
+    .gallery-item { border-radius: 12px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
     .gallery-item .img-placeholder {
-      width: 100%;
-      height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 1px;
+      width: 100%; height: 180px;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 14px; font-weight: 600; letter-spacing: 1px;
     }
-    .gallery-item .caption {
-      padding: 12px 16px;
-      background: #fff;
-      font-size: 13px;
-      color: #555;
-    }
+    .gallery-item .caption { padding: 12px 16px; background: #fff; font-size: 13px; color: #555; }
 
-    /* ===== CTA Banner ===== */
     .cta-banner {
       background: linear-gradient(135deg, #1a5276 0%, #2d7d9b 60%, #3a9db8 100%);
       color: #fff;
@@ -445,29 +305,15 @@
       text-align: center;
       margin: 40px 0;
     }
-    .cta-banner h2 {
-      font-size: clamp(24px, 4vw, 34px);
-      margin-bottom: 16px;
-    }
-    .cta-banner p {
-      font-size: 16px;
-      opacity: 0.9;
-      max-width: 600px;
-      margin: 0 auto 24px;
-      line-height: 1.8;
-    }
+    .cta-banner h2 { font-size: clamp(24px, 4vw, 34px); margin-bottom: 16px; }
+    .cta-banner p { font-size: 16px; opacity: 0.9; max-width: 600px; margin: 0 auto 24px; line-height: 1.8; }
     .cta-banner .cta-days {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
+      display: inline-flex; align-items: center; gap: 12px;
       background: rgba(255,255,255,0.15);
-      padding: 12px 28px;
-      border-radius: 30px;
-      font-size: 18px;
-      font-weight: 700;
+      padding: 12px 28px; border-radius: 30px;
+      font-size: 18px; font-weight: 700;
     }
 
-    /* ===== Footer ===== */
     footer {
       background: #0f1f33;
       color: rgba(255,255,255,0.6);
@@ -477,20 +323,9 @@
       line-height: 2;
     }
     footer a { color: rgba(255,255,255,0.7); }
-    footer .footer-domain {
-      font-size: 16px;
-      font-weight: 700;
-      color: rgba(255,255,255,0.85);
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-    }
-    footer .footer-tagline {
-      font-size: 13px;
-      color: rgba(127, 212, 255, 0.7);
-      margin-bottom: 16px;
-    }
+    .footer-domain { font-size: 16px; font-weight: 700; color: rgba(255,255,255,0.85); letter-spacing: 1px; margin-bottom: 8px; }
+    .footer-tagline { font-size: 13px; color: rgba(127, 212, 255, 0.7); margin-bottom: 16px; }
 
-    /* ===== Responsive ===== */
     @media (max-width: 600px) {
       .nav-links { display: none; }
       .quote-block { padding: 36px 24px; }
@@ -498,7 +333,6 @@
       .cta-banner { padding: 32px 20px; }
     }
 
-    /* ===== Placeholder gradient backgrounds for images ===== */
     .bg-tundra   { background: linear-gradient(135deg, #a8b8c8 0%, #6b8a9c 50%, #4a6a7a 100%); }
     .bg-aurora   { background: linear-gradient(135deg, #0a1628 0%, #1a4a6a 40%, #2a8a6a 70%, #4adba0 100%); }
     .bg-reindeer { background: linear-gradient(135deg, #d4a880 0%, #a87850 50%, #6a4828 100%); }
@@ -507,13 +341,10 @@
     .bg-permafrost { background: linear-gradient(135deg, #c8d8e8 0%, #98a8b8 50%, #687880 100%); }
     .bg-crater   { background: linear-gradient(135deg, #3a2a1a 0%, #6a4a2a 50%, #9a6a3a 100%); }
     .bg-people   { background: linear-gradient(135deg, #e8d8c8 0%, #b89878 50%, #8a6858 100%); }
-    .bg-salekhard { background: linear-gradient(135deg, #3a5a7a 0%, #2a4a6a 50%, #1a3a5a 100%); }
-    .bg-river    { background: linear-gradient(135deg, #5a8a6a 0%, #3a6a4a 50%, #2a5a3a 100%); }
   </style>
 </head>
 <body>
 
-  <!-- ===== Hero ===== -->
   <header class="hero">
     <div class="hero-content">
       <span class="domain-badge">🌐 yamal10.com</span>
@@ -529,7 +360,6 @@
     <div class="scroll-hint">↓ 向下滚动查看 10 天行程</div>
   </header>
 
-  <!-- ===== Navigation ===== -->
   <nav class="nav">
     <div class="nav-inner">
       <div class="nav-logo">
@@ -548,7 +378,6 @@
     </div>
   </nav>
 
-  <!-- ===== Overview ===== -->
   <section id="overview">
     <div class="container">
       <span class="section-tag">About Yamal10</span>
@@ -559,7 +388,6 @@
       <p class="section-lead" style="margin-bottom: 0;">
         本站以"10 天行程"为主线，串联起亚马尔半岛最核心的自然景观、极地生态与原住民文化，为计划前往极地探险的旅行者、地理爱好者和科研人员提供系统的参考框架。
       </p>
-
       <div class="quote-block">
         <p class="quote-text">"10 天，是从一个世界的边缘，走进另一个世界所需的时间。"</p>
         <p class="quote-author">— yamal10.com · 编者按</p>
@@ -567,7 +395,6 @@
     </div>
   </section>
 
-  <!-- ===== 10 Days Itinerary ===== -->
   <section id="itinerary" style="background: #fff;">
     <div class="container">
       <span class="section-tag">核心内容</span>
@@ -676,7 +503,6 @@
     </div>
   </section>
 
-  <!-- ===== Landscape Cards ===== -->
   <section id="landscape">
     <div class="container">
       <span class="section-tag">第二章</span>
@@ -749,7 +575,6 @@
     </div>
   </section>
 
-  <!-- ===== Wildlife ===== -->
   <section id="wildlife" style="background: #fff;">
     <div class="container">
       <span class="section-tag">第三章</span>
@@ -785,7 +610,6 @@
     </div>
   </section>
 
-  <!-- ===== Climate ===== -->
   <section id="climate">
     <div class="container">
       <span class="section-tag">第四章</span>
@@ -813,7 +637,6 @@
     </div>
   </section>
 
-  <!-- ===== Culture ===== -->
   <section id="culture" style="background: #fff;">
     <div class="container">
       <span class="section-tag">第五章</span>
@@ -854,7 +677,6 @@
     </div>
   </section>
 
-  <!-- ===== Data Table ===== -->
   <section id="data">
     <div class="container">
       <span class="section-tag">附录 · Yamal10 Data</span>
@@ -916,7 +738,6 @@
     </div>
   </section>
 
-  <!-- ===== Footer ===== -->
   <footer>
     <div class="footer-domain">yamal10.com</div>
     <div class="footer-tagline">Yamal in 10 Days · 十天穿越世界边缘</div>
